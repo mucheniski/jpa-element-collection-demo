@@ -40,5 +40,14 @@ public class User {
             @AttributeOverride(name = "addressLine2", column = @Column(name = "street"))
     })
     private Set<Address> addresses = new HashSet<>();
+    
+    public User() {}
+    
+    public User(String name, String email, Set<String> phoneNumbers, Set<Address> addresses) {
+        this.name = name;
+        this.email = email;
+        this.phoneNumbers = phoneNumbers;
+        this.addresses = addresses;
+    }
 
 }
